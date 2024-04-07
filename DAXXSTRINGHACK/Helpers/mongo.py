@@ -1,19 +1,21 @@
-import sys
-
 import logging
 from struct import pack
 import re
 import base64
-
-from config import Config
+from pyrogram.file_id import FileId
+from pymongo.errors import DuplicateKeyError
+from umongo import Instance, Document, fields
 from motor.motor_asyncio import AsyncIOMotorClient
+from marshmallow.exceptions import ValidationError
+from config import Config
 
-# Mongo Database
-try:
-    mongodb = AsyncIOMotorClient(Config.MONGO_URL).Daxx
-except:
-    print("Please Change Your MongoDB")
-    sys.exit()
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+
+
+client = AsyncIOMotorClient(DATABASE_URI)
+#db = client[DATABASE_NAME]
+#instance = Instance.from_db(db)
 
 
 chatsdb = mongodb.tgchatsdb
