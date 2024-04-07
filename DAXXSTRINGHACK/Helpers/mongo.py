@@ -1,5 +1,10 @@
 import sys
 
+import logging
+from struct import pack
+import re
+import base64
+
 from config import Config
 from motor.motor_asyncio import AsyncIOMotorClient
 
