@@ -6,7 +6,7 @@ import base64
 from pymongo.errors import DuplicateKeyError
 #from umongo import Instance, Document, fields
 from motor.motor_asyncio import AsyncIOMotorClient
-from marshmallow.exceptions import ValidationError
+#from marshmallow.exceptions import ValidationError
 from config import Config
 
 logger = logging.getLogger(__name__)
