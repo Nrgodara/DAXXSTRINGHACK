@@ -1,4 +1,5 @@
-motor==2.5.1
+motor
+#==2.5.1
 pyrogram==2.0.97
 pyromod==1.5
 TgCrypto
